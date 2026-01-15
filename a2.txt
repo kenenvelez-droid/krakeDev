@@ -1,1 +1,7 @@
 soy el archivo a2
+
+por fin me hacen caso 
+
+estuve untracked mucho tiempo
+
+ahora estoy staged
