@@ -49,7 +49,7 @@ calcularValorTotal = function () {
     // El IVA debe calcularse sobre el valor del subtotal menos el descuento
     valorIVA = calcularIva(valorSubtotal - valorDescuento)
     //9. Mostrar el resultado en el componente lblValorIVA    
-    mostrarTexto("lblValorIVA",valorIVA)
+    mostrarTexto("lblValorIVA", valorIVA)
 
     /*
         Caso de prueba: 
@@ -67,9 +67,9 @@ calcularValorTotal = function () {
         Si el caso de prueba es exitoso, hacer un commit
     */
     //10. Invocar a calcularTotal y lo que devuelve guardar en la variable valorTotal
-    valorTotal = calcularTotal(valorSubtotal,valorDescuento,valorIVA)
+    valorTotal = calcularTotal(valorSubtotal, valorDescuento, valorIVA)
     //11. Mostrar el resultado en el componente lblTotal
-    mostrarTexto("lblTotal",valorTotal)
+    mostrarTexto("lblTotal", valorTotal)
     /*
         Caso de prueba: 
             - cantidad: 10
@@ -86,7 +86,7 @@ calcularValorTotal = function () {
        */
 
     //12. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
-    mostrarTexto("lblResumen","Valor a pagar por 20 cerveza corona con 10% de descuento: "+valorTotal)
+    mostrarTexto("lblResumen", "Valor a pagar por 20 cerveza corona con 10% de descuento: " + valorTotal)
     /*
         Ejemplo: 
             Valor a pagar por 20 cerveza corona con 10% de descuento: USD 48.75
@@ -95,6 +95,15 @@ calcularValorTotal = function () {
 
 }
 limpiar = function () {
+    mostrarTextoEnCaja("txtProducto", "");
+    mostrarTextoEnCaja("txtCantidad", "0");
+    mostrarTextoEnCaja("txtPrecio", "0.0");
+    mostrarTextoEnCaja("txtPorcentajeDescuento", "0");
+    mostrarTexto("lblSubtotal", "0.0")
+    mostrarTexto("lblDescuento", "0.0")
+    mostrarTexto("lblValorIVA", "0.0")
+    mostrarTexto("lblTotal", "0.0")
+    mostrarTexto("lblResumen", "")
     /*
         Dejar todas las cajas de texto con el valor cadena vacía, 0 ó 0.0 según el tipo de dato
         Dejar todos los textos de los montos con el valor 0.0
